@@ -7,7 +7,7 @@ def delete(files):
 
 users = os.path.expandvars('$HOMEPATH')
 f = open(r'C:' + users + '\\AppData\\Roaming\\Tencent\\WeChat\\All Users\\config\\3ebffe94.ini')
-if f == 'MyDocument:':
+if f.read() == 'MyDocument:':
     location = 'C:' + users + '\Documents\WeChat Files'
 else:
     location = f.read() + "\WeChat Files"
