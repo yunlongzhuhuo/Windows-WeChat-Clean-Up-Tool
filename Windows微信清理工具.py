@@ -29,7 +29,7 @@ try: # 定位WeChat Files文件夹
         list0.remove('Applet')
         title = "(状态正常)"
         errorcode = 0
-    except:
+    except (OSError, ValueError):
         location = getDocPath(5) + '\WeChat Files'
         list0 = os.listdir(location)
         list0.remove('All Users')
